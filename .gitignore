@@ -1,0 +1,6 @@
+# Binaries & geo databases
+bin/
+
+# Runtime database & logs
+guiLogs/
+guiConfigs/guiNDB.db
