@@ -4,3 +4,18 @@ bin/
 # Runtime database & logs
 guiLogs/
 guiConfigs/guiNDB.db
+
+# Runtime credentials and adaptive-routing state
+runtime/
+*.pid
+learned-routes.json
+
+# Generated Go and Flutter output
+core/routerctl
+app/.dart_tool/
+app/.flutter-plugins
+app/.flutter-plugins-dependencies
+app/build/
+app/android/app/libs/libbox.aar
+app/android/app/libs/libbox.aar.sha256
+app/apple/Libbox.xcframework/

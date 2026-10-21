@@ -1,0 +1,21 @@
+{
+  "id": "wireguard-example",
+  "name": "WireGuard example",
+  "outbound": {
+    "type": "wireguard",
+    "address": [
+      "10.0.0.2/32"
+    ],
+    "private_key": "AAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAAA=",
+    "peers": [
+      {
+        "address": "example.invalid",
+        "port": 51820,
+        "public_key": "BBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBBB=",
+        "allowed_ips": [
+          "0.0.0.0/0"
+        ]
+      }
+    ]
+  }
+}

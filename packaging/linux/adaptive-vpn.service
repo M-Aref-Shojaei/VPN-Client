@@ -1,0 +1,40 @@
+[Unit]
+Description=Adaptive VPN privileged tunnel service
+After=network-online.target
+Wants=network-online.target
+
+[Service]
+Type=simple
+User=root
+Group=adaptive-vpn
+UMask=0077
+ExecStart=/usr/lib/adaptive-vpn/routerctl serve \
+  -core /usr/lib/adaptive-vpn/sing-box \
+  -core-sha256 68aeab83cc4ab2659a5b92232261a20746ccdafc3b3d1e19b2d63247eec3bbf7 \
+  -runtime-dir /var/lib/adaptive-vpn/runtime \
+  -socket /run/adaptive-vpn/control.sock
+Restart=on-failure
+RestartSec=2s
+RuntimeDirectory=adaptive-vpn
+RuntimeDirectoryMode=0750
+StateDirectory=adaptive-vpn
+StateDirectoryMode=0750
+AmbientCapabilities=CAP_NET_ADMIN CAP_NET_RAW
+CapabilityBoundingSet=CAP_NET_ADMIN CAP_NET_RAW
+NoNewPrivileges=yes
+ProtectSystem=strict
+ProtectHome=yes
+PrivateTmp=yes
+ProtectKernelTunables=yes
+ProtectKernelModules=yes
+ProtectControlGroups=yes
+RestrictNamespaces=yes
+RestrictRealtime=yes
+LockPersonality=yes
+RestrictAddressFamilies=AF_UNIX AF_INET AF_INET6 AF_NETLINK
+DevicePolicy=closed
+DeviceAllow=/dev/net/tun rw
+ReadWritePaths=/run/adaptive-vpn /var/lib/adaptive-vpn
+
+[Install]
+WantedBy=multi-user.target

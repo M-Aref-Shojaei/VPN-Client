@@ -1,0 +1,14 @@
+{
+  "id": "example-profile",
+  "name": "Example VLESS profile",
+  "outbound": {
+    "type": "vless",
+    "server": "example.invalid",
+    "server_port": 443,
+    "uuid": "00000000-0000-0000-0000-000000000000",
+    "tls": {
+      "enabled": true,
+      "server_name": "example.invalid"
+    }
+  }
+}

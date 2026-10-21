@@ -19,12 +19,13 @@ Related: [[01-Architecture/System-Overview]] | [[00-Index/Project-Roadmap]]
 
 | # | Title | Status | Date |
 |---|-------|--------|------|
-| | UI/UX redesign reference app (hiddify-app vs. Streisand) | 🔄 Research done, no decision yet | 2026-07 |
-
-Reference-app research (hiddify-app is the strongest open-source reference: same protocol coverage,
-only genuinely cross-platform Win/macOS/Linux/iOS/Android client) currently lives in the vault note
-`Professional/VPN Client.md` — promote it to a real ADR here once the redesign direction (custom
-build vs. adopting hiddify-app patterns/fork) is actually decided.
+| [[07-Decisions/ADR-001-Product-Foundation\|ADR-001]] | Flutter + Go/sing-box clean product foundation | ✅ Accepted | 2026-07-18 |
+| [[07-Decisions/ADR-002-Adaptive-Routing\|ADR-002]] | Direct-by-default adaptive routing | ✅ Accepted | 2026-07-18 |
+| [[07-Decisions/ADR-003-Linux-Control-Boundary\|ADR-003]] | Linux process and privilege boundary | ✅ Accepted | 2026-07-18 |
+| [[07-Decisions/ADR-004-Privileged-Linux-Service\|ADR-004]] | Group-restricted privileged Linux service | ✅ Accepted | 2026-07-19 |
+| [[07-Decisions/ADR-005-Secure-Updates\|ADR-005]] | Secure profiles and verified remote rules | ✅ Accepted | 2026-07-19 |
+| [[07-Decisions/ADR-006-Hiddify-Reference-Strategy\|ADR-006]] | Hiddify reference without a source fork | ✅ Accepted | 2026-07-21 |
+| [[07-Decisions/ADR-007-Windows-Service-Boundary\|ADR-007]] | Windows service and named-pipe boundary | ✅ Accepted | 2026-07-21 |
 
 ---
 
